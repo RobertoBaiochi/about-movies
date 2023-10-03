@@ -7,7 +7,7 @@ export const NowPlayingList = async () => {
     const nowPlayingData = await api.get("movie/now_playing", {
         method: "GET",
         params: {
-            language: "pt-BR",
+            language: "en-US",
             page: 1,
         },
     });

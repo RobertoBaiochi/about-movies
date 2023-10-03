@@ -25,6 +25,10 @@
 .header nav .my_list {
     text-decoration: none;
     font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
     color: #fff;
     background-color: #c60339;
     border-radius: 0.4rem;
