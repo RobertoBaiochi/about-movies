@@ -1,0 +1,48 @@
+.banner {
+    width: 100%;
+    height: calc(100vh - 6rem);
+    background-image: url("../../../public/banner2.webp");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    padding-inline: 2rem;
+    z-index: 8;
+}
+
+.banner div {
+    max-width: 80rem;
+    width: 100%;
+    max-height: 30rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    border-radius: 3rem;
+    gap: 2rem;
+}
+
+.banner h1 {
+    font-size: 6rem;
+    color: #fff;
+    text-align: center;
+}
+
+@media (min-width: 500px) {
+    .banner h1 {
+        font-size: 7rem;
+    }
+}
+
+@media (min-width: 700px) {
+    .banner {
+        background-size: 100% 100%;
+    }
+    .banner h1 {
+        font-size: 12rem;
+    }
+}
