@@ -10,6 +10,7 @@
 
 .list__section h2 {
     font-size: 2.6rem;
+    text-transform: capitalize;
 }
 
 .list__section .btn__link {
