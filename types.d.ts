@@ -1,4 +1,4 @@
-interface NowPlayingProps {
+interface ListaDataProps {
     adult: boolean;
     backdrop_path: string;
     genre_ids: number[];
@@ -13,4 +13,11 @@ interface NowPlayingProps {
     video: false;
     vote_average: number;
     vote_count: number;
+}
+
+interface RenderListProps {
+    render?: number;
+    slice: boolean;
+    urlQuery: string;
+    title: string;
 }

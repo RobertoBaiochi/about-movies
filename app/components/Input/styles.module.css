@@ -21,4 +21,5 @@
     border: none;
     background-color: #fff;
     border-radius: 0 0.4rem 0.4rem 0;
+    cursor: pointer;
 }
