@@ -17,7 +17,7 @@ export const FetchDataList = async ({
         },
     });
 
-    const urlList: ListaDataProps[] = slice
+    const urlList: ListDataProps[] = slice
         ? urlData.data.results.slice(0, render)
         : urlData.data.results;
 

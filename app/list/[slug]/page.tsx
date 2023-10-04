@@ -6,8 +6,8 @@ export default function ListPage({ params }: { params: { slug: string } }) {
 
     const myTitle = slug.replace("_", " ").toLowerCase();
     return (
-        <section className={styles.list__page}>
+        <main className={styles.list__page}>
             <FetchDataList slice={false} title={myTitle} urlQuery={slug} />
-        </section>
+        </main>
     );
 }
