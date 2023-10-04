@@ -2,6 +2,8 @@ import "./globals.css";
 import type { Metadata } from "next";
 import { Chivo } from "next/font/google";
 import { MyHeader } from "./components/Header";
+import { ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 const chivo = Chivo({ weight: "400", subsets: ["latin"] });
 
@@ -19,6 +21,18 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={chivo.className}>
+                <ToastContainer
+                    position="bottom-center"
+                    autoClose={2500}
+                    hideProgressBar={false}
+                    newestOnTop={false}
+                    closeOnClick
+                    rtl={false}
+                    pauseOnFocusLoss
+                    draggable
+                    pauseOnHover
+                    theme="dark"
+                />
                 <MyHeader />
                 {children}
             </body>
