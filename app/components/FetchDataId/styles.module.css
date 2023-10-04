@@ -99,6 +99,7 @@
     justify-content: center;
     border-radius: 50%;
     background-color: #c60339;
+    transition: all 250ms ease-in-out;
 }
 
 .info__container .time__container {
@@ -159,5 +160,12 @@
     .info__container .time__container {
         justify-content: start;
         gap: 2rem;
+    }
+}
+
+@media (hover: hover) {
+    .info__container .action__container a:hover {
+        background-color: #f26463;
+        transform: scale(1.2);
     }
 }

@@ -6,4 +6,13 @@
     justify-content: center;
     border-radius: 50%;
     background-color: #c60339;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+
+@media (hover: hover) {
+    .add__button:hover {
+        background-color: #f26463;
+        transform: scale(1.2);
+    }
 }

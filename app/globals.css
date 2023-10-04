@@ -30,3 +30,8 @@ ol {
 button {
     border: none;
 }
+
+*::selection {
+    background-color: #c60339;
+    color: #fff;
+}
