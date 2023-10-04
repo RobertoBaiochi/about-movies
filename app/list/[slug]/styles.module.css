@@ -1,4 +1,10 @@
 .list__page {
-    margin-top: 9rem;
+    margin-top: 7rem;
     width: 100%;
+}
+
+@media (min-width: 500px) {
+    .header {
+        height: 9rem;
+    }
 }

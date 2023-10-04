@@ -27,7 +27,7 @@ export const FetchDataList = async ({
             <div className={styles.list__container}>
                 {urlList.map((movie) => {
                     return (
-                        <Link key={movie.id} href={`/filme/${movie.id}`}>
+                        <Link key={movie.id} href={`/movie/${movie.id}`}>
                             <Image
                                 src={`https://image.tmdb.org/t/p/original${movie.poster_path}`}
                                 alt=""
