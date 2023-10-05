@@ -1,0 +1,22 @@
+.back__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 3rem;
+    padding: 0.8rem 2rem;
+    font-size: 1.8rem;
+    color: #fff;
+    border: none;
+    background-color: #c60339;
+    border-radius: 0.8rem;
+    cursor: pointer;
+    transition: all 250ms ease-in-out;
+}
+
+@media (hover: hover) {
+    .back__button:hover {
+        background-color: #f26463;
+        transform: scale(1.1);
+    }
+}

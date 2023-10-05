@@ -1,10 +1,10 @@
-.list__page {
+.mylist__page {
     margin-top: 7rem;
     width: 100%;
 }
 
 @media (min-width: 500px) {
-    .list__page {
+    .mylist__page {
         margin-top: 9rem;
     }
 }

@@ -5,7 +5,7 @@ import { MyHeader } from "./components/Header";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-const chivo = Chivo({ weight: "400", subsets: ["latin"] });
+const chivo = Chivo({ weight: ["400", "800"], subsets: ["latin"] });
 
 export const metadata: Metadata = {
     title: "About Movies ~ Home",

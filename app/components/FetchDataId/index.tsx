@@ -7,6 +7,7 @@ import { AiFillStar } from "react-icons/ai";
 
 import { api } from "@/app/service/api";
 import { AddListButton } from "../AddListButton/AddListButton";
+import { ButtonBack } from "../ButtonBack";
 
 export const FetchMovieId = async ({ movieId }: { movieId: string }) => {
     const fetchMovieById = await api.get(`/movie/${movieId}`, {
@@ -75,6 +76,7 @@ export const FetchMovieId = async ({ movieId }: { movieId: string }) => {
                     </div>
                 </article>
             </div>
+            <ButtonBack />
         </section>
     );
 };

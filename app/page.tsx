@@ -1,11 +1,15 @@
 import styles from "./page.module.css";
 import { FetchDataList } from "./components/FetchDataList";
+import { MyListComponent } from "./components/MyListComponent";
 import { Banner } from "./components/Banner";
 
 export default function Home() {
     return (
         <main className={styles.main}>
             <Banner />
+
+            <MyListComponent render={4} slice />
+
             <FetchDataList
                 render={4}
                 slice
