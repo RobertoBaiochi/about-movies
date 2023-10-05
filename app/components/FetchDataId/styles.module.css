@@ -138,7 +138,7 @@
     }
     .movie__container .card__info article {
         display: flex;
-        align-items: start;
+        align-items: flex-start;
         justify-content: center;
         flex-direction: row;
 
