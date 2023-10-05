@@ -1,10 +1,18 @@
+"use client";
+
 import Image from "next/image";
 import Link from "next/link";
 import logo from "public/logo.webp";
 import styles from "./styles.module.css";
-import { FaListUl } from "react-icons/fa";
+import { RiMenu3Fill } from "react-icons/ri";
+
+import { SearchInput } from "../Input/SearchInput";
+import { useState } from "react";
+import { Menu } from "../Menu";
 
 export const MyHeader = () => {
+    const [openMenu, setOpenMenu] = useState<boolean>(false);
+
     return (
         <header className={styles.header}>
             <nav>
@@ -12,15 +20,21 @@ export const MyHeader = () => {
                     <Image
                         src={logo}
                         alt="Logo about movies"
-                        width={50}
-                        height={50}
+                        width={100}
+                        height={100}
                     />
                 </Link>
 
-                <Link href="/mylist" className={styles.my_list}>
-                    My List
-                    <FaListUl size="1.2rem" color="#fff" />
-                </Link>
+                <SearchInput />
+
+                <button
+                    onClick={() => setOpenMenu(true)}
+                    className={styles.menu__button}
+                >
+                    <span>Menu</span>
+                    <RiMenu3Fill size="3rem" color="#fff" />
+                </button>
+                <Menu open={openMenu} closeMenu={() => setOpenMenu(false)} />
             </nav>
         </header>
     );

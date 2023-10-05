@@ -20,6 +20,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    gap: 2rem;
+}
+
+.header nav a img {
+    width: 7rem;
+    height: auto;
 }
 
 .header nav .my_list {
@@ -36,6 +42,23 @@
     transition: all 230ms linear;
 }
 
+.header nav .menu__button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.8rem;
+    color: #fff;
+    background-color: #c60339;
+    padding: 0.4rem;
+    border-radius: 0.4rem;
+    gap: 1rem;
+    cursor: pointer;
+}
+
+.header nav .menu__button span {
+    display: none;
+}
+
 @media (min-width: 500px) {
     .header {
         height: 9rem;
@@ -43,7 +66,7 @@
 
     .header nav a img {
         width: 8rem;
-        height: 8rem;
+        height: auto;
     }
 
     .header nav .my_list {
@@ -52,8 +75,18 @@
     }
 }
 
+@media (min-width: 900px) {
+    .header nav .menu__button span {
+        display: block;
+    }
+}
+
 @media (hover: hover) {
     .header nav .my_list:hover {
+        background-color: #f26463;
+    }
+
+    .header nav .menu__button:hover {
         background-color: #f26463;
     }
 }

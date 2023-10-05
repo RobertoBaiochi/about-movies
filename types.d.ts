@@ -72,3 +72,8 @@ interface SpokenLanguagesProps {
     iso_639_1: string;
     name: string;
 }
+
+interface MenuProps {
+    open: boolean;
+    closeMenu: (value: SetStateAction<boolean>) => void;
+}

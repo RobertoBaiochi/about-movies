@@ -1,6 +1,6 @@
 "use client";
 
-import { MdOutlineMovieFilter } from "react-icons/md";
+import { BiListPlus } from "react-icons/bi";
 import { toast } from "react-toastify";
 import styles from "./styles.module.css";
 
@@ -26,8 +26,12 @@ export const AddListButton = ({ ...movieById }) => {
 
     return (
         <>
-            <button className={styles.add__button} onClick={saveMovie}>
-                <MdOutlineMovieFilter size="2.5rem" color="#fff" />
+            <button
+                className={styles.add__button}
+                onClick={saveMovie}
+                title="Add to your list"
+            >
+                <BiListPlus size="2.5rem" color="#fff" />
             </button>
         </>
     );

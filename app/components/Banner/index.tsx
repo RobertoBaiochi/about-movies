@@ -1,4 +1,3 @@
-import { SearchInput } from "../Input/SearchInput";
 import styles from "./styles.module.css";
 import { Lilita_One } from "next/font/google";
 
@@ -9,7 +8,7 @@ export const Banner = () => {
         <section className={styles.banner}>
             <div>
                 <h1 className={lilita.className}>About Movies</h1>
-                <SearchInput />
+                <p>Ludimillo</p>
             </div>
         </section>
     );
