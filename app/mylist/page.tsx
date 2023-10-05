@@ -1,11 +1,12 @@
 "use client";
+
 import { ButtonBack } from "../components/ButtonBack";
 import { MyListComponent } from "../components/MyListComponent";
 import { useMyList } from "../hooks/useMyList";
 import styles from "./styles.module.css";
 
 export default function MyList() {
-    const { myList } = useMyList();
+    const { myList, setMyList } = useMyList();
 
     return (
         <main className={styles.mylist__page}>
