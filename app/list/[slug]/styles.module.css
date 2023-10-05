@@ -3,6 +3,11 @@
     width: 100%;
 }
 
+.list__page .btn__container {
+    display: flex;
+    justify-content: center;
+}
+
 @media (min-width: 500px) {
     .list__page {
         margin-top: 9rem;

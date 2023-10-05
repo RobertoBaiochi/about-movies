@@ -5,6 +5,8 @@ import Image from "next/image";
 import Link from "next/link";
 import { toast } from "react-toastify";
 import styles from "./styles.module.css";
+import { BsTrash3Fill } from "react-icons/bs";
+import { MouseEvent } from "react";
 
 export const MyListComponent = ({
     render,
@@ -15,7 +17,11 @@ export const MyListComponent = ({
 }) => {
     const { myList, setMyList } = useMyList();
 
-    const handleDelete = (id: number) => {
+    const handleDelete = (
+        event: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>,
+        id: number
+    ): void => {
+        event.preventDefault();
         const filteredList = myList.filter((item) => {
             return item.id !== id;
         });
@@ -50,6 +56,14 @@ export const MyListComponent = ({
                                 height={450}
                                 loading="lazy"
                             />
+                            <div className={styles.delete__container}>
+                                <button
+                                    onClick={(e) => handleDelete(e, movie.id)}
+                                    type="button"
+                                >
+                                    <BsTrash3Fill size="2rem" color="#fff" />
+                                </button>
+                            </div>
                         </Link>
                     );
                 })}
