@@ -53,14 +53,19 @@
 }
 
 .menu__container .navlink__container a {
-    font-size: 2.6rem;
+    font-size: 2.2rem;
     color: #000;
+    transition: all 200ms ease-in-out;
 }
 
 @media (min-width: 580px) {
     .menu__container,
     .menu__container_closed {
         width: 50%;
+    }
+
+    .menu__container .navlink__container a {
+        font-size: 2.6rem;
     }
 }
 

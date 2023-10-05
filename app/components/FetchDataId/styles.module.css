@@ -159,7 +159,7 @@
     }
 
     .info__container .time__container {
-        justify-content: start;
+        justify-content: flex-start;
         gap: 2rem;
     }
 }
