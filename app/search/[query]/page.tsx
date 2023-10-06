@@ -2,16 +2,15 @@
 
 import { FetchDataSearchList } from "@/app/components/FetchDataSearchList";
 import styles from "./styles.module.css";
-import { useSearchContext } from "../context/search";
 
-export default function SearchPage() {
-    const { query } = useSearchContext();
+export default function SearchPage({ params }: { params: { query: string } }) {
+    const { query } = params;
 
     return (
         <main className={styles.search__main}>
             <FetchDataSearchList
-                title="Search"
                 slice={false}
+                title="Search"
                 urlQuery={query}
             />
         </main>

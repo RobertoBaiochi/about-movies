@@ -2,12 +2,11 @@
 
 import styles from "./styles.module.css";
 import { BsSearch } from "react-icons/bs";
-import { useSearchContext } from "@/app/context/search";
-import { ChangeEvent, FormEvent } from "react";
+import { ChangeEvent, FormEvent, useState } from "react";
 import { useRouter } from "next/navigation";
 
 export const SearchInput = () => {
-    const { query, setQuery } = useSearchContext();
+    const [query, setQuery] = useState("");
 
     const router = useRouter();
 
@@ -17,8 +16,7 @@ export const SearchInput = () => {
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setQuery(query);
-        router.push("/search");
+        router.push(`/search/${query}`);
     };
 
     return (
