@@ -49,7 +49,7 @@
     font-size: 1.8rem;
     color: #fff;
     background-color: #c60339;
-    padding: 0.4rem;
+    padding: 0.4rem 0.8rem;
     border-radius: 0.4rem;
     gap: 1rem;
     cursor: pointer;
@@ -76,6 +76,10 @@
 }
 
 @media (min-width: 900px) {
+    .header nav .menu__button {
+        padding: 0.4rem;
+    }
+
     .header nav .menu__button span {
         display: block;
     }

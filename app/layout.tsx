@@ -4,6 +4,7 @@ import { Chivo } from "next/font/google";
 import { MyHeader } from "./components/Header";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import SearchContextProvider from "./context/search";
 
 const chivo = Chivo({ weight: ["400", "800"], subsets: ["latin"] });
 
@@ -21,20 +22,22 @@ export default function RootLayout({
     return (
         <html lang="en">
             <body className={chivo.className}>
-                <ToastContainer
-                    position="bottom-center"
-                    autoClose={2500}
-                    hideProgressBar={false}
-                    newestOnTop={false}
-                    closeOnClick
-                    rtl={false}
-                    pauseOnFocusLoss
-                    draggable
-                    pauseOnHover
-                    theme="dark"
-                />
-                <MyHeader />
-                {children}
+                <SearchContextProvider>
+                    <ToastContainer
+                        position="bottom-center"
+                        autoClose={2500}
+                        hideProgressBar={false}
+                        newestOnTop={false}
+                        closeOnClick
+                        rtl={false}
+                        pauseOnFocusLoss
+                        draggable
+                        pauseOnHover
+                        theme="dark"
+                    />
+                    <MyHeader />
+                    {children}
+                </SearchContextProvider>
             </body>
         </html>
     );

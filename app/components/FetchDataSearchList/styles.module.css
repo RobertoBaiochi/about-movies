@@ -1,0 +1,81 @@
+.list__section {
+    max-width: 140rem;
+    display: flex;
+    flex-direction: column;
+    margin-inline: auto;
+    padding-inline: 2rem;
+    padding-block: 3rem;
+    gap: 2rem;
+}
+
+.list__section h2 {
+    font-size: 2.6rem;
+    text-transform: capitalize;
+    font-weight: 800;
+    color: #000;
+}
+
+.list__section .btn__link {
+    width: 100%;
+    background-color: #c60339;
+    padding: 1.2rem 1.6rem;
+    border-radius: 0.4rem;
+    display: inline;
+    color: #fff;
+    font-size: 1.6rem;
+    text-align: center;
+    transition: all 250ms linear;
+}
+
+.list__section .list__container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.list__section .list__container a {
+    width: 100%;
+    height: 100%;
+    align-self: center;
+    justify-self: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    transition: all 250ms ease-in-out;
+    border-radius: 0.8rem;
+    overflow: hidden;
+}
+.list__section .list__container a img {
+    width: 100%;
+    height: 100%;
+}
+
+@media (min-width: 580px) {
+    .list__section .list__container {
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 32.5fr));
+    }
+    .list__section .btn__link {
+        width: fit-content;
+    }
+
+    .list__section h2 {
+        font-size: 3.6rem;
+        text-transform: capitalize;
+        font-weight: 800;
+        color: #000;
+    }
+}
+
+@media (hover: hover) {
+    .list__section .btn__link:hover {
+        background-color: #f26463;
+    }
+
+    .list__section .list__container a:hover {
+        transform: scale(1.03);
+    }
+
+    .list__section .list__container:hover a:not(:hover) {
+        filter: brightness(0.5);
+    }
+}

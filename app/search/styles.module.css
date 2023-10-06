@@ -1,0 +1,10 @@
+.search__main {
+    margin-top: 7rem;
+    width: 100%;
+}
+
+@media (min-width: 500px) {
+    .search__main {
+        margin-top: 9rem;
+    }
+}
