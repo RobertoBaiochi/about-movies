@@ -8,7 +8,12 @@ export const Banner = () => {
         <section className={styles.banner}>
             <div>
                 <h1 className={lilita.className}>About Movies</h1>
-                <p>Ludimillo</p>
+                <p>
+                    At About Movies you will find the best of cinema in the palm
+                    of your hand. Read about the most anticipated releases, the
+                    classics that marked generations, and the documentaries that
+                    reveal the world. All this with quality, speed and safety.
+                </p>
             </div>
         </section>
     );
