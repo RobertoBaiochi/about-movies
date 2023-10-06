@@ -44,11 +44,6 @@ export const FetchDataSearchList = async ({
                     );
                 })}
             </div>
-            {slice && (
-                <Link href={`/list/${urlQuery}`} className={styles.btn__link}>
-                    See More...
-                </Link>
-            )}
         </section>
     );
 };

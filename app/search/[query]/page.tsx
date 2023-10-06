@@ -1,5 +1,3 @@
-"use client";
-
 import { FetchDataSearchList } from "@/app/components/FetchDataSearchList";
 import styles from "./styles.module.css";
 

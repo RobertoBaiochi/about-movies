@@ -16,9 +16,9 @@ export const SearchInput = () => {
 
     const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
+        if (!query) return;
         const teste = query.trim().toLowerCase();
         router.push(`/search/${teste}`);
-        setQuery("");
     };
 
     return (
