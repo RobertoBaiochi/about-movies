@@ -25,7 +25,7 @@
     top: 0;
     right: 0;
     z-index: 20;
-    background-color: rgba(255, 255, 255, 0.7);
+    background-color: rgba(255, 255, 255, 0.9);
     transition: all 100ms ease-in-out;
 }
 
@@ -41,6 +41,7 @@
     padding: 0.4rem;
     border-radius: 0.4rem;
     cursor: pointer;
+    transition: all 250ms ease-in-out;
 }
 
 .menu__container .navlink__container {
@@ -77,6 +78,9 @@
 }
 
 @media (hover: hover) {
+    .menu__container button:hover {
+        background-color: #f26463;
+    }
     .menu__container .navlink__container a:hover {
         color: #c60339;
         transform: translateY(-10%);

@@ -82,6 +82,7 @@
 
     .header nav .menu__button span {
         display: block;
+        padding-left: 0.4rem;
     }
 }
 
