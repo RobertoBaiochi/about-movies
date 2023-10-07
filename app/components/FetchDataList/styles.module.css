@@ -41,6 +41,7 @@
     align-self: center;
     justify-self: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    background-color: #6c6a6a;
     transition: all 250ms ease-in-out;
     border-radius: 0.8rem;
     overflow: hidden;

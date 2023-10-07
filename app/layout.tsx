@@ -4,6 +4,7 @@ import { Chivo } from "next/font/google";
 import { MyHeader } from "./components/Header";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import Footer from "./components/Footer/Footer";
 
 const chivo = Chivo({ weight: ["400", "800"], subsets: ["latin"] });
 
@@ -35,6 +36,7 @@ export default function RootLayout({
                 />
                 <MyHeader />
                 {children}
+                <Footer />
             </body>
         </html>
     );
