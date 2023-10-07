@@ -19,6 +19,7 @@ export const SearchInput = () => {
         if (!query) return;
         const teste = query.trim().toLowerCase();
         router.push(`/search/${teste}`);
+        setQuery("");
     };
 
     return (

@@ -9,6 +9,7 @@ export default function ListPage({ params }: { params: { slug: string } }) {
     return (
         <main className={styles.list__page}>
             <FetchDataList slice={false} title={myTitle} urlQuery={slug} />
+
             <div className={styles.btn__container}>
                 <ButtonBack />
             </div>
