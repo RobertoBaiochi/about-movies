@@ -7,6 +7,10 @@ import Link from "next/link";
 
 const routesMenu = [
     {
+        title: "Home",
+        route: "/",
+    },
+    {
         title: "My List",
         route: "/mylist",
     },
