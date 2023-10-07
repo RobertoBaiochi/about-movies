@@ -1,6 +1,8 @@
 .list__page {
     margin-top: 7rem;
     width: 100%;
+    min-height: 100vh;
+    height: 100%;
 }
 
 .list__page .btn__container {

@@ -6,7 +6,7 @@ import { useMyList } from "../hooks/useMyList";
 import styles from "./styles.module.css";
 
 export default function MyList() {
-    const { myList, setMyList } = useMyList();
+    const { myList } = useMyList();
 
     return (
         <main className={styles.mylist__page}>

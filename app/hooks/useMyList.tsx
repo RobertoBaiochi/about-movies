@@ -11,7 +11,7 @@ export const useMyList = () => {
         const getMyList = myListData !== null ? JSON.parse(myListData) : [];
 
         setMyList(getMyList);
-    }, []);
+    }, [setMyList]);
 
     return { myList, setMyList };
 };

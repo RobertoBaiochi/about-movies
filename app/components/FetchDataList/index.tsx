@@ -2,6 +2,8 @@ import { api } from "@/app/service/api";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./styles.module.css";
+import { toast } from "react-toastify";
+import { redirect } from "next/navigation";
 
 export const FetchDataList = async ({
     render,
@@ -9,17 +11,26 @@ export const FetchDataList = async ({
     urlQuery,
     title,
 }: RenderListProps) => {
-    const urlData = await api.get(`movie/${urlQuery}`, {
-        method: "GET",
-        params: {
-            language: "en-US",
-            page: 1,
-        },
-    });
+    const urlData = await api
+        .get(`movie/${urlQuery}`, {
+            method: "GET",
+            params: {
+                language: "en-US",
+                page: 1,
+            },
+        })
+        .then((response) => {
+            return response.data;
+        })
+        .catch((error) => {
+            console.log(error);
+            toast.error("ooops, i'm sorry for this!");
+            redirect("/");
+        });
 
     const urlList: ListDataProps[] = slice
-        ? urlData.data.results.slice(0, render)
-        : urlData.data.results;
+        ? urlData.results.slice(0, render)
+        : urlData.results;
 
     return (
         <section className={styles.list__section}>

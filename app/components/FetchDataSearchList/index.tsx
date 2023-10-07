@@ -2,6 +2,8 @@ import { api } from "@/app/service/api";
 import Image from "next/image";
 import Link from "next/link";
 import styles from "./styles.module.css";
+import { toast } from "react-toastify";
+import { redirect } from "next/navigation";
 
 export const FetchDataSearchList = async ({
     render,
@@ -9,26 +11,36 @@ export const FetchDataSearchList = async ({
     urlQuery,
     title,
 }: RenderListProps) => {
-    const urlData = await api.get(`search/movie`, {
-        method: "GET",
-        params: {
-            language: "en-US",
-            page: 1,
-            query: urlQuery,
-        },
-    });
+    const urlData = await api
+        .get(`search/movie`, {
+            method: "GET",
+            params: {
+                language: "en-US",
+                page: 1,
+                query: urlQuery,
+            },
+        })
+        .then((response) => {
+            return response.data;
+        })
+        .catch((error) => {
+            console.log(error);
+            toast.error("Oops, i'm sorry for this!");
+            redirect("/");
+        });
 
     const urlList: ListDataProps[] = slice
-        ? urlData.data.results.slice(0, render)
-        : urlData.data.results;
+        ? urlData.results.slice(0, render)
+        : urlData.results;
 
-    if (urlList.length === 0) {
-        return <h1>No movies found</h1>;
-    }
+    const noFound = () => {
+        return <h1>No Movies found...</h1>;
+    };
 
     return (
         <section className={styles.list__section}>
             <h2>{title}</h2>
+            {urlList.length === 0 && noFound()}
             <div className={styles.list__container}>
                 {urlList.map((movie) => {
                     return (

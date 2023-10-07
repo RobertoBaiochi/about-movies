@@ -35,3 +35,17 @@ button {
     background-color: #c60339;
     color: #fff;
 }
+
+body::-webkit-scrollbar {
+    width: 0.8rem;
+}
+
+body::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 1rem;
+}
+
+body::-webkit-scrollbar-thumb {
+    background: #c60339;
+    border-radius: 10px;
+}

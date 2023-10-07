@@ -8,17 +8,28 @@ import { AiFillStar } from "react-icons/ai";
 import { api } from "@/app/service/api";
 import { AddListButton } from "../AddListButton/AddListButton";
 import { ButtonBack } from "../ButtonBack";
+import { toast } from "react-toastify";
+import { redirect } from "next/navigation";
 
 export const FetchMovieId = async ({ movieId }: { movieId: string }) => {
-    const fetchMovieById = await api.get(`/movie/${movieId}`, {
-        method: "GET",
-        params: {
-            language: "en-US",
-            page: 1,
-        },
-    });
+    const fetchMovieById = await api
+        .get(`/movie/${movieId}`, {
+            method: "GET",
+            params: {
+                language: "en-US",
+                page: 1,
+            },
+        })
+        .then((response) => {
+            return response.data;
+        })
+        .catch((error) => {
+            console.log(error);
+            toast.error("Oops, i'm sorry for this!");
+            redirect("/");
+        });
 
-    const movieById: MovieIdProps = fetchMovieById.data;
+    const movieById: MovieIdProps = fetchMovieById;
 
     return (
         <section
